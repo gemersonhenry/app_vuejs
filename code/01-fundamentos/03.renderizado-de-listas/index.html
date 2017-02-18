@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FUNDAMENTOS DE VUEJS</title>
+        <meta name="description" content="Curso de VUE JS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+		<main>
+			Días de semana:
+			<ul>
+				<li v-for="dia in diasDeSemana">
+					{{ dia }}
+				</li>
+			</ul>
+			Días laborables:
+			<ul>
+				<li v-for="dia in diasLaborables">
+					{{ dia }}
+				</li>
+			</ul>
+			<ul>
+				<!-- <li v-for="(tarea, index) in tareas"> -->
+				<li v-for="tarea in tareas">
+					{{ tarea.nombre }} - {{ tarea.prioridad }}
+				</li>
+			</ul>
+			<pre>{{ $data }}</pre>
+		</main>
+
+		<script type="text/javascript" src="../../../libs/vuejs/vue.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
