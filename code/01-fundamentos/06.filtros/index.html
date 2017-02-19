@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FUNDAMENTOS DE VUEJS</title>
+        <meta name="description" content="Curso de VUE JS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    	<main>
+            <form>
+                <input type="text" v-model="nombre" placeholder="nombre" />
+                <input type="range" v-model="puntaje" 
+                    placeholder="puntaje" min="0" max="10" />
+                <select v-model="estado">
+                    <option value="">Todos</option>
+                    <option value="si">En cartelera</option>
+                    <option value="no">Fuera de cartelera</option>
+                </select>
+                <select v-model="idioma">
+                    <option value="">Todos</option>
+                    <option value="Ingles">Ingles</option>
+                    <option value="Español">Español</option>
+                </select>
+            </form>
+            <ul>
+                <li v-for="peli in filtroCompleto">
+                    {{ peli.nombre }} - puntuación: {{ peli.puntuacion }} - Idioma: {{ peli.idioma }}
+                </li>
+            </ul>
+            <!-- <pre>
+                {{ $data }}
+            </pre> -->
+        </main>
+		
+		<script type="text/javascript" src="../../../libs/vuejs/vue.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
