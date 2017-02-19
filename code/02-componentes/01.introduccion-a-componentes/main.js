@@ -12,7 +12,12 @@ Vue.component('mis-tareas', {
 new Vue({
 	el: 'main',
 	data: {
-		tareasAjax: []
+		tareasAjax: [],
+		tareasLocales: [
+			{ title: 'Hacer las compras' },
+			{ title: 'Aprender vuejs' },
+			{ title: 'Aprender javascript ES6' },
+		]
 	},
 	mounted() {
 		axios.get('https://jsonplaceholder.typicode.com/todos')
