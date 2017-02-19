@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>COMPONENTES VUE JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    </head>
+    <body>
+        
+        <main>
+			<elegir-ganador :listado="personas" inline-template>
+                <div>           
+                    <h2 v-if='ganador' >Ganador: {{ ganador }} </h2>
+                    <template v-else>
+                        <h2>Participantes</h2>
+                        <ul>
+                            <li v-for='persona in listado'>
+                                {{ persona }}
+                            </li>
+                        </ul>
+                    </template>
+                    <button @click='elegirGanador()'>Elegir ganador</button>
+                </div>    
+            </elegir-ganador>
+
+            <!-- <template id='elegir-ganador-template'>
+                <div>           
+                    <h2 v-if='ganador' >Ganador: {{ ganador }} </h2>
+                    <template v-else>
+                        <h2>Participantes</h2>
+                        <ul>
+                            <li v-for='persona in listado'>
+                                {{ persona }}
+                            </li>
+                        </ul>
+                    </template>
+                    <button @click='elegirGanador()'>Elegir ganador</button>
+                </div>
+            </template> -->
+        </main>            
+
+        <script type="text/javascript" src="../../../libs/vuejs/vue.min.js"></script>
+        <script type="text/javascript" src="../../../libs/vuejs/axios.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
