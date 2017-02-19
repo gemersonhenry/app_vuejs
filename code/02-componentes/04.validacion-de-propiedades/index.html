@@ -6,13 +6,26 @@
         <title>COMPONENTES VUE JS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+        <link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/bootstrap.min.css">
+        <style type="text/css" media="screen">
+            .usercard-enter-active, .usercard-leave-active{
+                transition: opacity 0.5s;
+            }
+            .usercard-enter, .usercard-leave-to{
+                opacity: 0;
+            }
+        </style>
     </head>
     <body>
         
-        <main>
-			
-        </main>            
+        <section id="contenido">
+            <div class="row">
+                <user-card v-for="user in users" v-bind:user="user" appear>
+                    Loading ...         
+                </user-card>
+            </div>    			
+        </section>        
 
         <script type="text/javascript" src="../../../libs/vuejs/vue.min.js"></script>
         <script type="text/javascript" src="../../../libs/vuejs/axios.min.js"></script>
