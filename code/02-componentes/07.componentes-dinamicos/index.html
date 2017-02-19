@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>COMPONENTES VUE JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/bootstrap.min.css">
+        <style type="text/css" media="screen">
+            .usercard-enter-active, .usercard-leave-active{
+                transition: opacity 1s;
+            }
+            .usercard-enter, .usercard-leave-to{
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <section class="container">   
+            <main>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                        <select class="form-control" v-model="templateActual">
+                            <option value="lista-usuarios-female">Mujeres</option>
+                            <option value="lista-usuarios-male">Hombres</option>
+                        </select>
+                    </div>
+                </div>
+                <component :is="templateActual">                
+                </component>     
+            </main>
+        </section> 
+
+        <script type="text/javascript" src="../../../libs/vuejs/vue.min.js"></script>
+        <script type="text/javascript" src="../../../libs/vuejs/axios.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
