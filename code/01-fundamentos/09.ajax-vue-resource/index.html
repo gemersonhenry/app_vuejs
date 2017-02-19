@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FUNDAMENTOS DE VUEJS</title>
+        <meta name="description" content="Curso de VUE JS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+    	<main>
+            <img v-for="persona in personas" 
+                v-bind:src="persona.picture.thumbnail">
+            <!-- <pre>{{ $data }}</pre> -->
+        </main>
+		
+		<script type="text/javascript" src="../../../libs/vuejs/vue.min.js"></script>
+        <script type="text/javascript" src="../../../libs/vuejs/vue-resource.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

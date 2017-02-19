@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>FUNDAMENTOS DE VUEJS</title>
+        <meta name="description" content="Curso de VUE JS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css" media="screen">
+            /*Transición*/
+            .aparecer-enter{
+                opacity: 0;
+            }
+            .aparecer-enter-active{
+                transition: opacity 1s;
+            }
+            .aparecer-leave-active{
+                transition: opacity 1s;
+            }
+            .aparecer-leave-to{
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+    	<main>
+            <button type="button" @click="mostrar = !mostrar">
+                Mostrar/Ocultar
+            </button>
+            <transition name="aparecer">
+                <h1 v-if="mostrar" v-text="mensajes.transition" >                    
+                </h1>
+            </transition>
+            <!-- <pre>
+                {{ $data }}
+            </pre> -->
+        </main>
+		
+		<script type="text/javascript" src="../../../libs/vuejs/vue.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
