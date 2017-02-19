@@ -46,9 +46,14 @@ new Vue({
 		users: []
 	},
 	mounted() {
-		axios.get('https://randomuser.me/api/?results=100')
-			.then((response) => {
-				this.users = response.data.results;
-			});
+		this.obtenerUsers();
+	},
+	methods: {
+		obtenerUsers() {
+			axios.get('https://randomuser.me/api/?results=100')
+				.then((response) => {
+					this.users = response.data.results;
+				});
+		}
 	}
 });

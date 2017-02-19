@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>COMPONENTES VUE JS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/normalize.css">
+        <link rel="stylesheet" type="text/css" href="../../../libs/bootstrap/bootstrap.min.css">
+        
+    </head>
+    <body>
+        
+        <main>
+            
+            <listado-productos  v-bind:productos="productos">                
+            </listado-productos>
+
+            <carrito-compras>                
+            </carrito-compras>
+
+        </main>        
+
+        <script type="text/javascript" src="../../../libs/vuejs/vue.min.js"></script>
+        <script type="text/javascript" src="../../../libs/vuejs/axios.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
